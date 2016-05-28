@@ -24,6 +24,10 @@ table{
   background-color: green;
   background-image: url('<%= asset_path("hat.jpg") %>');
   background-size: cover;
+  img{
+    padding-top: 120px;
+    padding-left: 80px;
+  }
 }
 #htop{
   height: 200px;
@@ -54,8 +58,49 @@ background-size: cover;
 .whitefone{
   padding: 15px;
   background-image: url('<%= asset_path('lined.jpg') %>');
-
+  font-size: 18px;
 }
 #address{
   font-size: 2.5em;
 }
+.menubar{
+  height: 70px;
+  background-image: url('<%= asset_path('menubar0.png') %>');
+  background-size: cover;
+  
+}
+table{
+  width: 100%;
+}
+.menubar td{
+  text-align: center;
+  
+  a{
+    color: white;
+  }
+  &:hover{
+        a{
+          color: black;
+        }
+        
+        font-weight: bold;
+        background-image: url('<%= asset_path("lined.png") %>');
+        
+    
+  }
+  }
+  span img{
+  height: 30px;
+  width: 40px;
+  margin: -10px 20px 0px 0px;
+  }
+  #footer{
+    color: white;
+    height: 400px;
+    background-image: url('<%= asset_path('menubar0.png') %>');
+    background-size: cover;
+  }
+  .reclama{
+    font-family: fantasy cursive serif;
+    color: brown;
+  }
