@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   match '/materials', to: 'home#materials', via: 'get'
   match '/buildings', to: 'home#buildings', via: 'get'
   match '/news', to: 'home#news', via: 'get'
-  match '/library', to: 'home#library', via: 'get'
+  match '/price', to: 'home#price', via: 'get'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -10,6 +10,6 @@ class HomeController < ApplicationController
   end
   def news
   end
-  def library
+  def price
   end
 end
