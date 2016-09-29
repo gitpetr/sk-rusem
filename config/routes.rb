@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  match '/constructions', to: 'home#construction', via: 'get'
+  resources :constructions
+  # match '/constructions', to: 'home#construction', via: 'get'
   match '/materials', to: 'home#materials', via: 'get'
   match '/buildings', to: 'home#buildings', via: 'get'
   match '/news', to: 'home#news', via: 'get'

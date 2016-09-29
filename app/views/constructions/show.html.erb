@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="container">
+  <div class="row whitefone">
+
+<p>
+  <strong>Title:</strong>
+  <%= @construction.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+   <%= image_tag @construction.image.url(:medium) %>
+  <%= simple_format @construction.body %>
+</p>
+
+<%= link_to 'Edit', edit_construction_path(@construction) %> |
+<%= link_to 'Back', constructions_path %>
+
+<div class="container">
+  <div class="row whitefone">

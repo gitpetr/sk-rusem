@@ -52,4 +52,4 @@ gem 'autoprefixer-rails'
 gem 'rails_12factor', group: :production
 
 gem 'bxslider-rails'
-
+gem "paperclip", "~> 5.0.0"
