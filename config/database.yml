@@ -59,7 +59,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: rusem
+  database: rusem_test
   username: best
   password: best
 
