@@ -1,6 +1,6 @@
 class ConstructionsController < ApplicationController
   before_action :set_construction, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, except: [:index, :show]
   # GET /constructions
   # GET /constructions.json
   def index

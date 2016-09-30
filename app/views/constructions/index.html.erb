@@ -1,28 +1,22 @@
-<p id="notice"><%= notice %></p>
 
 <div class="container">
   <div class="row whitefone">
 
-<h1>Listing Constructions</h1>
+<h1>Строительные работы</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+ 
     <% @constructions.each do |construction| %>
-      <%= image_tag construction.image.url(:thumb) %>
-      <tr>
-        <td><%= construction.title %></td>
-        <td><%= truncate(construction.body, lengt: 200) %></td>
-        <td><%= link_to 'Show', construction %></td>
-        <td><%= link_to 'Edit', edit_construction_path(construction) %></td>
-        <td><%= link_to 'Destroy', construction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <p><%= construction.title %> </p>
+       <%= image_tag construction.image.url(:thumb) %>
+        <p>  <%= link_to truncate(construction.body, length: 1000), construction %> </p>
+ 
+
+        <% if user_signed_in? %>
+        <% if current_user.is_admin %>
+            <td><%= link_to 'Edit', edit_construction_path(construction) %></td>
+            <td><%= link_to 'Destroy', construction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <% end %>
+            <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -30,5 +24,9 @@
 
 <br>
 
+        <% if user_signed_in? %>
+        <% if current_user.is_admin %>
 <%= link_to 'New Construction', new_construction_path %>
+            <% end %>
+            <% end %>
 </div></div>

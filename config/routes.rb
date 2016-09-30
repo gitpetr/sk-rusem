@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :constructions
   # match '/constructions', to: 'home#construction', via: 'get'
   match '/materials', to: 'home#materials', via: 'get'
