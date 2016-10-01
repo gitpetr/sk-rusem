@@ -1,0 +1,14 @@
+<% if user_signed_in? %>
+  <% if current_user.is_admin %>
+
+<h1>Editing Building</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @building %> |
+<%= link_to 'Back', buildings_path %>
+<% else %>
+  <%= render 'access' %>
+<% end %>
+  
+<% end %>

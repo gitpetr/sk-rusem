@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row whitefone">
+<h1>Недвижимость</h1>
+
+ 
+    <% @buildings.each do |building| %>
+      
+        <p><%= building.title %></p>
+        <p class="agreen"><%= image_tag building.image.url(:thumb) %>
+        <%= link_to truncate(building.body, length: 1000), building %></p>
+
+          <% if user_signed_in? %>
+        <% if current_user.is_admin %>
+
+        <%= link_to 'Edit', edit_building_path(building) %>
+        <%= link_to 'Destroy', building, method: :delete, data: { confirm: 'Are you sure?' } %>
+      
+    <% end %>
+      <% end %>
+            <% end %>
+
+
+<br>
+
+ <% if user_signed_in? %>
+        <% if current_user.is_admin %>
+<%= link_to 'New Building', new_building_path %>
+
+  <% end %>
+            <% end %>
+</div></div>

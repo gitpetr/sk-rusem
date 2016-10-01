@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row whitefone">
+
+<p>
+ 
+  <%= @building.title %>
+</p>
+
+<p>
+<%= image_tag @building.image.url(:medium) %>
+  <%= simple_format @building.body %>
+</p>
+<% if user_signed_in? %>
+  <% if current_user.is_admin %>
+<%= link_to 'Edit', edit_building_path(@building) %> |
+<% end %>
+<% end %>
+
+<%= link_to 'Back', buildings_path %>
+</div>
+  </div>
