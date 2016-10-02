@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :news
   resources :buildings
   resources :materials
   devise_for :users
@@ -6,7 +7,7 @@ Rails.application.routes.draw do
   # match '/constructions', to: 'home#construction', via: 'get'
   #match '/materials', to: 'home#materials', via: 'get'
   # match '/buildings', to: 'home#buildings', via: 'get'
-  match '/news', to: 'home#news', via: 'get'
+  # match '/news', to: 'home#news', via: 'get'
   match '/price', to: 'home#price', via: 'get'
   
   # The priority is based upon order of creation: first created -> highest priority.
