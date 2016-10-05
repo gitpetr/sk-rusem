@@ -1,3 +1,7 @@
+<script type="text/javascript">
+setTimeout('location.replace("/")', 200);
+</script>
+
 <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -22,6 +26,7 @@
   </div>
 
   <div class="actions">
+
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
