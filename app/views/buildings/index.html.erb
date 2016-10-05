@@ -12,8 +12,8 @@
           <% if user_signed_in? %>
         <% if current_user.is_admin %>
 
-        <%= link_to 'Edit', edit_building_path(building) %>
-        <%= link_to 'Destroy', building, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to 'Edit', edit_building_path(building), class: "btn btn-warning btn-sm" %>
+        <%= link_to 'Destroy', building, class: "btn btn-danger btn-sm", method: :delete, data: { confirm: 'Are you sure?' } %>
       
     <% end %>
       <% end %>
@@ -24,7 +24,7 @@
 
  <% if user_signed_in? %>
         <% if current_user.is_admin %>
-<%= link_to 'New Building', new_building_path %>
+<%= link_to 'New Building', new_building_path, class: "btn btn-success btn-sm pull-right" %>
 
   <% end %>
             <% end %>
