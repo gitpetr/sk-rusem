@@ -13,8 +13,8 @@
         <% if user_signed_in? %>
         <% if current_user.is_admin %>  
 
-        <%= link_to 'Edit', edit_news_path(news) %>
-        <%= link_to 'Destroy', news, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to 'Edit', edit_news_path(news), class: "btn btn-warning btn-sm" %>
+        <%= link_to 'Destroy', news, class: "btn btn-danger btn-sm", method: :delete, data: { confirm: 'Are you sure?' } %>
     <% end %>
     
      <% end %>
@@ -24,7 +24,7 @@
 <br>
 <% if user_signed_in? %>
         <% if current_user.is_admin %>
-<%= link_to 'New News', new_news_path %>
+<%= link_to 'New News', new_news_path, class: "btn btn-success btn-sm pull-right" %>
  <% end %>
         <% end %>
 

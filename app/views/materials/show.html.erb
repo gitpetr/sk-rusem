@@ -14,10 +14,10 @@
 
 <% if user_signed_in? %>
   <% if current_user.is_admin %>
-<%= link_to 'Edit', edit_material_path(@material) %> |
+<%= link_to 'Edit', edit_material_path(@material), class: "btn btn-warning btn-sm pull-right" %> <span class=" pull-right"> &nbsp; </span>
 <% end %>
 <% end %>
 
-<%= link_to 'Back', materials_path %>
+<%= link_to 'Back', materials_path, class: "btn btn-success btn-sm pull-right" %>
 </div>
   </div>
