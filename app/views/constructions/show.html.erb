@@ -15,10 +15,11 @@
 </p>
 <% if user_signed_in? %>
   <% if current_user.is_admin %>
-    <%= link_to 'Edit', edit_construction_path(@construction), class: "btn btn-warning btn-sm pull-right" %> <span class="pull-right">&nbsp;</span>
+    <%= link_to 'Изменить', edit_construction_path(@construction), class: "btn btn-warning btn-sm pull-right" %> <span class="pull-right">&nbsp;</span>
 <% end %>
 <% end %>
-<%= link_to 'Back', constructions_path, class: "btn btn-success btn-sm pull-right" %>
+<%= link_to 'Назад', constructions_path, class: "btn btn-success btn-sm pull-right" %>
+
 
 </div>
   </div>
