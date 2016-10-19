@@ -12,10 +12,10 @@
 
          <% if user_signed_in? %>
         <% if current_user.is_admin %>
-
-        <%= link_to 'Edit', edit_material_path(material), class: "btn btn-warning btn-sm" %>
-        <%= link_to 'Destroy', material, class: "btn btn-danger btn-sm", method: :delete, data: { confirm: 'Are you sure?' } %>
-     
+        <p>
+        <%= link_to 'Изменить', edit_material_path(material), class: "btn btn-warning btn-sm" %>
+        <%= link_to 'Удалить', material, class: "btn btn-danger btn-sm", method: :delete, data: { confirm: 'Удалить насовсем?' } %>
+      </p>
      <% end %>
             <% end %>
    
@@ -25,7 +25,7 @@
 <br>
         <% if user_signed_in? %>
         <% if current_user.is_admin %>
-<%= link_to 'New Material', new_material_path, class: "btn btn-success btn-sm pull-right" %>
+<%= link_to 'Добавить статью', new_material_path, class: "btn btn-success btn-sm pull-right" %>
          <% end %>
         <% end %>
 

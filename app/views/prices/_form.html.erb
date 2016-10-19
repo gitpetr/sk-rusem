@@ -1,3 +1,4 @@
+<div class="row whitefone">
 <%= form_for(@price) do |f| %>
   <% if @price.errors.any? %>
     <div id="error_explanation">
@@ -12,18 +13,19 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :name, 'Название' %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :tonnag %><br>
+    <%= f.label :tonnag, 'Тоннаж' %><br>
     <%= f.text_field :tonnag %>
   </div>
   <div class="field">
-    <%= f.label :cost %><br>
+    <%= f.label :cost, 'Цена' %><br>
     <%= f.number_field :cost %>
-  </div>
+  </div><br>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'сохранить' %>
   </div>
 <% end %>
+</div>

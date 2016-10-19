@@ -1,14 +1,16 @@
+<div class="col-md-8 col-md-offset-2">
+<div class="row">
 <% if user_signed_in? %>
   <% if current_user.is_admin %>
 
-<h1>Editing Price</h1>
+<h1>Редактировать</h1>
 
 <%= render 'form' %>
 
  
-<%= link_to 'Back', prices_path %>
 <% else %>
   <%= render 'access' %>
 <% end %>
   
 <% end %>
+</div></div>

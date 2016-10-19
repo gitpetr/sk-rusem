@@ -1,3 +1,5 @@
+
+
 <%= form_for(@material, html: { multipart: true }) do |f| %>
   <% if @material.errors.any? %>
     <div id="error_explanation">
@@ -26,6 +28,6 @@
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Сохранить' %>
   </div>
 <% end %>

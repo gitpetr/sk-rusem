@@ -5,16 +5,15 @@
 
  
     <% @news.each do |news| %>
-  
-       <p><strong> <%= news.title %></strong> <br />
-       <em> <%= news.created_at.strftime("%m-%d-%Y") %></em></p>
+       <em id="datanews"> <%= news.created_at.strftime("%m-%d-%Y") %></em>
+       <p id="titlenews"><strong> <%= news.title %></strong></p>
        <p> <%= simple_format news.body %>
 
         <% if user_signed_in? %>
         <% if current_user.is_admin %>  
 
-        <%= link_to 'Edit', edit_news_path(news), class: "btn btn-warning btn-sm" %>
-        <%= link_to 'Destroy', news, class: "btn btn-danger btn-sm", method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to 'Изменить', edit_news_path(news), class: "btn btn-warning btn-sm" %>
+        <%= link_to 'Удалить', news, class: "btn btn-danger btn-sm", method: :delete, data: { confirm: 'Удалить безвозвратно?' } %>
     <% end %>
     
      <% end %>
@@ -24,7 +23,7 @@
 <br>
 <% if user_signed_in? %>
         <% if current_user.is_admin %>
-<%= link_to 'New News', new_news_path, class: "btn btn-success btn-sm pull-right" %>
+<%= link_to 'Добавить новость', new_news_path, class: "btn btn-success btn-sm pull-right" %>
  <% end %>
         <% end %>
 

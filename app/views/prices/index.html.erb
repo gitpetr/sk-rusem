@@ -52,8 +52,8 @@
 
         <% if user_signed_in? %>
         <% if current_user.is_admin %>
-            <td><%= link_to 'Edit', edit_price_path(price), class: "btn btn-warning btn-sm" %></td>
-            <td><%= link_to 'Destroy', price, class: "btn btn-danger btn-sm", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Изменить', edit_price_path(price), class: "btn btn-warning btn-sm" %></td>
+            <td><%= link_to 'Удалить', price, class: "btn btn-danger btn-sm", method: :delete, data: { confirm: 'Удалить безвозвратно?' } %></td>
         <% end %>
         <% end %>
       </tr>
@@ -65,7 +65,7 @@
 
 <% if user_signed_in? %>
   <% if current_user.is_admin %>
-      <%= link_to 'New Price', new_price_path, class: "btn btn-success btn-sm pull-right" %>
+      <%= link_to 'Добавить товар', new_price_path, class: "btn btn-success btn-sm pull-right" %>
   <% end %>
 <% end %>
 </div></div>

@@ -31,7 +31,7 @@ class PricesController < ApplicationController
 
     respond_to do |format|
       if @price.save
-        format.html { redirect_to prices_url, notice: 'Price was successfully created.' }
+        format.html { redirect_to prices_url  }
         format.json { render :show, status: :created, location: @price }
       else
         format.html { render :new }
@@ -45,7 +45,7 @@ class PricesController < ApplicationController
   def update
     respond_to do |format|
       if @price.update(price_params)
-        format.html { redirect_to @price, notice: 'Price was successfully updated.' }
+        format.html { redirect_to @price  }
         format.json { render :show, status: :ok, location: @price }
       else
         format.html { render :edit }
@@ -59,7 +59,7 @@ class PricesController < ApplicationController
   def destroy
     @price.destroy
     respond_to do |format|
-      format.html { redirect_to prices_url, notice: 'Price was successfully destroyed.' }
+      format.html { redirect_to prices_url }
       format.json { head :no_content }
     end
   end

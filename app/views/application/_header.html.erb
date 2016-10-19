@@ -67,7 +67,9 @@
  
 
 
-
+          <% if user_signed_in? %>
+        <% if current_user.is_admin %>
+      <td><%= link_to "Выйти", destroy_user_session_path, method: :delete %></td><% end %> <% end %>
         </tr>
       
 
