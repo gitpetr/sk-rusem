@@ -12,3 +12,4 @@
 !/log/.keep
 /tmp
 /app/assets/stylesheets/home_.scss
+db/seeds.rb
