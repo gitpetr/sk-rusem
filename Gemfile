@@ -55,3 +55,4 @@ gem 'bxslider-rails'
 gem "paperclip", "~> 5.0.0"
 gem 'devise'
 gem 'rails-i18n', '~> 4.0.0'
+gem 'puma'
