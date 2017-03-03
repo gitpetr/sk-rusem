@@ -48,7 +48,6 @@ end
 #gem 'nivo-rails'
 gem 'bootstrap-sass' 
 gem 'autoprefixer-rails'
-#gem 'bxslider-rails' 
 gem 'rails_12factor', group: :production
 
 gem 'bxslider-rails'
